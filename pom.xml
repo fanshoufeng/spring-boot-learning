@@ -9,7 +9,7 @@
         <version>2.2.2.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>org.fanshoufeng</groupId>
+    <groupId>com.fanshoufeng</groupId>
     <artifactId>spring-boot-learning</artifactId>
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
