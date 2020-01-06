@@ -22,5 +22,6 @@
 
     <modules>
         <module>spring-boot-helloworld</module>
+        <module>spring-boot-web</module>
     </modules>
 </project>
