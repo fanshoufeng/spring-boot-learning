@@ -3,15 +3,20 @@ package com.fanshoufeng.jpa.jdbc.datasource;
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 
 import javax.sql.DataSource;
+import java.util.HashMap;
 import java.util.Map;
 
 public class DynamicDataSource extends AbstractRoutingDataSource {
 
     private static final ThreadLocal<String> dynamicDataSourceContextHolder = new ThreadLocal<>();
 
-    public DynamicDataSource(DataSource defaultTargetDataSource, Map<String, DataSource> targetDataSources) {
-        super.setDefaultTargetDataSource(defaultTargetDataSource);
-        super.setDefaultTargetDataSource(targetDataSources);
+    private Map<Object, Object> dynamicTargetDataSources;
+
+    @Override
+    public void setTargetDataSources(Map<Object, Object> targetDataSources) {
+        dynamicTargetDataSources = new HashMap<>();
+        dynamicTargetDataSources.putAll(targetDataSources);
+        super.setTargetDataSources(targetDataSources);
         super.afterPropertiesSet();
     }
 
@@ -30,6 +35,20 @@ public class DynamicDataSource extends AbstractRoutingDataSource {
 
     public static void clearDataSourceLookupKey() {
         dynamicDataSourceContextHolder.remove();
+    }
+
+    public void add(String dataSourceKey, DataSource dataSource) {
+        dynamicTargetDataSources.put(dataSourceKey, dataSource);
+        setDynamicTargetDataSources();
+    }
+
+    public void remove(String dataSourceKey) {
+        dynamicTargetDataSources.remove(dataSourceKey);
+        setDynamicTargetDataSources();
+    }
+
+    private void setDynamicTargetDataSources() {
+        setTargetDataSources(dynamicTargetDataSources);
     }
 
 }
