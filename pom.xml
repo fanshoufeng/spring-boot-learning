@@ -71,5 +71,7 @@
         <module>spring-boot-jpa-thymeleaf-curd</module>
         <module>spring-boot-file-upload</module>
         <module>spring-boot-actuator</module>
+        <module>spring-boot-admin-server</module>
+        <module>spring-boot-admin-client</module>
     </modules>
 </project>
