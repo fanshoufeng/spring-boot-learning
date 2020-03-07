@@ -70,5 +70,6 @@
         <module>spring-boot-shiro</module>
         <module>spring-boot-jpa-thymeleaf-curd</module>
         <module>spring-boot-file-upload</module>
+        <module>spring-boot-actuator</module>
     </modules>
 </project>
