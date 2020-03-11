@@ -73,6 +73,7 @@
         <module>spring-boot-actuator</module>
         <module>spring-boot-admin-server</module>
         <module>spring-boot-admin-client</module>
+        <module>spring-boot-banner</module>
         <module>spring-boot-docker</module>
     </modules>
 </project>
