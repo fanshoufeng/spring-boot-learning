@@ -1,4 +1,4 @@
-package com.fanshofueng.actuator.controller;
+package com.fanshoufeng.actuator.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

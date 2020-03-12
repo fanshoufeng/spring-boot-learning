@@ -1,4 +1,4 @@
-package com.fanshofueng.actuator;
+package com.fanshoufeng.actuator;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
