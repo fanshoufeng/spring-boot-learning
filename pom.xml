@@ -75,5 +75,6 @@
         <module>spring-boot-admin-client</module>
         <module>spring-boot-banner</module>
         <module>spring-boot-docker</module>
+        <module>spring-boot-mysql-nginx</module>
     </modules>
 </project>
