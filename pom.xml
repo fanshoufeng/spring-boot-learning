@@ -76,5 +76,6 @@
         <module>spring-boot-banner</module>
         <module>spring-boot-docker</module>
         <module>spring-boot-mysql-nginx</module>
+        <module>spring-boot-command-line-runner</module>
     </modules>
 </project>
